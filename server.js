@@ -19,7 +19,9 @@ connection.once('open', () => {
 })
 
 const voyagesRouter = require('./routes/voyages');
+const usersRouter = require('./routes/users');
 app.use('/voyages', voyagesRouter);
+app.use('/api', usersRouter);
 
 app.listen(port, () => {
     console.log(`Server is running on port: ${port}`);
