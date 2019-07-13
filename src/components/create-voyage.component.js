@@ -9,11 +9,21 @@ export default class CreateVoyage extends Component {
 
     this.onChangeLocation = this.onChangeLocation.bind(this);
     this.onChangeDate = this.onChangeDate.bind(this);
+    this.onChangeRating = this.onChangeRating.bind(this);
+    this.onChangeDuration = this.onChangeDuration.bind(this);
+    this.onChangeCompanions = this.onChangeCompanions.bind(this);
+    this.onChangeCost = this.onChangeCost.bind(this);
+    this.onChangeNotes = this.onChangeNotes.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
 
 		this.state = {
-			location: '',
-			date: new Date(),
+      location: '',
+      date: new Date(),
+      rating: 0,
+      companions: '',
+      duration: 0,
+      cost: 0,
+      notes: '',
 		}
   }
   
@@ -26,12 +36,43 @@ export default class CreateVoyage extends Component {
 		this.setState({
 			date: date
 		});
+  }
+  onChangeRating(e) {
+		this.setState({
+			rating: e.target.value
+		});
 	}
+	onChangeCompanions(e) {
+    this.setState({
+      companions: e.target.value
+		});
+	}
+  onChangeDuration(e) {
+    this.setState({
+      duration: e.target.value
+    });
+  }
+	onChangeCost(e) {
+		this.setState({
+			cost: e.target.value
+		});
+	}
+	onChangeNotes(e) {
+		this.setState({
+			notes: e.target.value
+		});
+  }
+  
 	onSubmit(e) {
 		e.preventDefault();
 		const voyage = {
 			location: this.state.location,
-			date: this.state.date,
+      date: this.state.date,
+      rating: this.state.rating,
+      companions: this.state.companions,
+      duration: this.state.duration,
+      cost: this.state.cost,
+      notes: this.state.notes,
 		};
     console.log(voyage);
     axios.post('http://localhost:3001/voyages/add', voyage)
@@ -61,6 +102,49 @@ export default class CreateVoyage extends Component {
                 onChange={this.onChangeDate}
               />
             </div>
+          </div>
+          <div className="form-group">
+            <label>Rating: </label>
+            <input 
+                type="text" 
+                className="form-control"
+                value={this.state.rating}
+                onChange={this.onChangeRating}
+                />
+          </div>
+          <div className="form-group"> 
+            <label>Companions: </label>
+            <input  type="text"
+                className="form-control"
+                value={this.state.companions}
+                onChange={this.onChangeCompanions}
+                />
+          </div>
+          <div className="form-group">
+            <label>Duration (in days): </label>
+            <input 
+                type="text" 
+                className="form-control"
+                value={this.state.duration}
+                onChange={this.onChangeDuration}
+                />
+          </div>
+          <div className="form-group">
+            <label>Cost: </label>
+            <input 
+                type="text" 
+                className="form-control"
+                value={this.state.cost}
+                onChange={this.onChangeCost}
+                />
+          </div>
+          <div className="form-group"> 
+            <label>Notes: </label>
+            <input  type="text"
+                className="form-control"
+                value={this.state.notes}
+                onChange={this.onChangeNotes}
+                />
           </div>
 
           <div className="form-group">
