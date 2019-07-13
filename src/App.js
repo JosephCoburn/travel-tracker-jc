@@ -9,10 +9,23 @@ import EditVoyage from "./components/edit-voyage.component";
 import CreateVoyage from "./components/create-voyage.component";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import SignupPage from "./pages/SignupPage/SignupPage";
+import userService from './utils/userService';
 
 class App extends Component {
   constructor() {
     super();
+    this.state = {
+      user: userService.getUser()
+    };
+  }
+
+  handleLogout = () => {
+    userService.logout();
+    this.setState({ user: null });
+  }
+
+  handleSignupOrLogin = () => {
+    this.setState({user: userService.getUser()});
   }
 
   render() {
