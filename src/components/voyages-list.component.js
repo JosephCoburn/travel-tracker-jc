@@ -48,6 +48,11 @@ export default class VoyagesList extends Component {
     return (
       <div>
         <h3 className="my-voyages-header">My Voyages</h3>
+        <h6>
+          <Link to="/" className="table-filters">Past</Link>
+          <Link to="/" className="table-filters">Future</Link>
+          <Link to="/" className="table-filters">All</Link>
+        </h6>
         <table className="table table-striped">
           <thead style={{backgroundColor: "#e3fdee"}}>
             <tr>

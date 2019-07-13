@@ -2,7 +2,6 @@
 
 *{
   font-family: 'Lobster', cursive;
-  /* font-size: large; */
 }
 
 .App {
@@ -40,6 +39,17 @@
 
 .my-voyages-header {
   margin: 0 0 -4px 10px;
+  float: left;
+}
+
+.table-filters {
+  color: black;
+  margin: 10px 15px 0px 0px;
+  float: right;
+}
+
+.navbar {
+  background-color: #e3f2fd;
 }
 
 .navbar-brand {
