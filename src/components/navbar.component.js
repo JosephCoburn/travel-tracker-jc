@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Navbar = (props) => {
 
-  let nav = props.user ?
+return (
   <nav className="navbar navbar-light navbar-expand">
     <div className="mr-auto">
       <Link to="/" className="page-title navbar-brand">Travel Tracker</Link>
@@ -11,6 +11,12 @@ const Navbar = (props) => {
     <ul className="navbar-nav ml-auto">
       <li className="navbar-item">
         <Link to='' className='nav-link' onClick={props.handleLogout}>Logout</Link>
+      </li>
+      <li className="navbar-item">
+        <Link to='/login' className='nav-link'>Login</Link>
+      </li>
+      <li className="navbar-item">
+        <Link to='/signup' className='nav-link'>Signup</Link>
       </li>
       <li className="navbar-item">
         <div className="nav-link">|</div>
@@ -22,29 +28,9 @@ const Navbar = (props) => {
       <Link to="/create" className="nav-link">Add Voyage</Link>
       </li>
     </ul>
-  </nav>
-  :
-  <nav className="navbar navbar-light navbar-expand">
-    <div className="mr-auto">
-      <Link to="/" className="page-title navbar-brand">Travel Tracker</Link>
-    </div>
     <ul className="navbar-nav ml-auto">
-      <li className="navbar-item">
-        <Link to='/login' className='nav-link'>Login</Link>
-      </li>
-      <li className="navbar-item">
-        <Link to='/signup' className='nav-link'>Signup</Link>
-      </li>
     </ul>
   </nav>
-  ;
-
-
-  return (
-    <>
-    {nav}
-    </>
-  )
-}
+)};
 
 export default Navbar;

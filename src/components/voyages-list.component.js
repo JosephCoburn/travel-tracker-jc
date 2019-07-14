@@ -8,7 +8,7 @@ const Voyage = props => (
     <td>{props.voyage.date.substring(0,10)}</td>
     <td>
       <Link className="main-edit-btn" to={"/edit/"+props.voyage._id}>edit</Link> | 
-      <a className="main-delete-btn" href="#" onClick={() => { props.deleteVoyage(props.voyage._id) }}>delete</a>
+      <a className="main-delete-btn" href="/" onClick={() => { props.deleteVoyage(props.voyage._id) }}>delete</a>
     </td>
   </tr>
 )
