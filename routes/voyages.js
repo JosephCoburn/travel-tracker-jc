@@ -9,8 +9,11 @@ router.route('/').get((req, res) => {
 });
 
 router.route('/add').post((req, res) => {
-  const location = req.body.location;
   const date = Date.parse(req.body.date);
+  const region = req.body.region;
+  const country = req.body.country;
+  const territory = req.body.territory;
+  const location = req.body.location;
   const rating = Number(req.body.rating);
   const companions = req.body.companions;
   const duration = Number(req.body.duration);
@@ -18,8 +21,11 @@ router.route('/add').post((req, res) => {
   const notes = req.body.notes;
 
   const newVoyage = new Voyage({
-    location,
     date,
+    region,
+    country,
+    territory,
+    location,
     rating,
     companions,
     duration,
@@ -45,8 +51,11 @@ router.route('/:id').delete((req, res) => {
 router.route('/update/:id').post((req, res) => {
   Voyage.findById(req.params.id)
     .then(voyage => {
-      voyage.location = req.body.location;
       voyage.date = Date.parse(req.body.date);
+      voyage.region = req.body.region;
+      voyage.country = req.body.country;
+      voyage.territory = req.body.territory;
+      voyage.location = req.body.location;
       voyage.rating = Number(req.body.duration);
       voyage.companions = req.body.companions;
       voyage.duration = Number(req.body.duration);

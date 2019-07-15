@@ -7,8 +7,11 @@ export default class EditVoyage extends Component {
   constructor(props) {
     super(props);
 
-    this.onChangeLocation = this.onChangeLocation.bind(this);
     this.onChangeDate = this.onChangeDate.bind(this);
+    this.onChangeRegion = this.onChangeRegion.bind(this);
+    this.onChangeCountry = this.onChangeCountry.bind(this);
+    this.onChangeTerritory = this.onChangeTerritory.bind(this);
+    this.onChangeLocation = this.onChangeLocation.bind(this);
     this.onChangeRating = this.onChangeRating.bind(this);
     this.onChangeDuration = this.onChangeDuration.bind(this);
     this.onChangeCompanions = this.onChangeCompanions.bind(this);
@@ -17,8 +20,11 @@ export default class EditVoyage extends Component {
     this.onSubmit = this.onSubmit.bind(this);
 
     this.state = {
-      location: '',
       date: new Date(),
+      region: '',
+      country: '',
+      territory: '',
+      location: '',
       rating: 0,
       companions: '',
       duration: 0,
@@ -31,8 +37,11 @@ export default class EditVoyage extends Component {
     axios.get('http://localhost:3001/voyages/'+this.props.match.params.id)
       .then(response => {
         this.setState({
-          location: response.data.location,
           date: new Date(response.data.date),
+          region: response.data.region,
+          country: response.data.country,
+          territory: response.data.territory,
+          location: response.data.location,
           rating: response.data.rating,
           companions: response.data.companions,
           duration: response.data.duration,
@@ -45,14 +54,29 @@ export default class EditVoyage extends Component {
       })
   }
 
-  onChangeLocation(e) {
-    this.setState({
-      location: e.target.value
-    });
-  }
   onChangeDate(date) {
     this.setState({
       date: date
+    });
+  }
+  onChangeRegion(e) {
+    this.setState({
+      region: e.target.value
+    });
+  }
+  onChangeCountry(e) {
+    this.setState({
+      country: e.target.value
+    });
+  }
+  onChangeTerritory(e) {
+    this.setState({
+      territory: e.target.value
+    });
+  }
+  onChangeLocation(e) {
+    this.setState({
+      location: e.target.value
     });
   }
   onChangeRating(e) {
@@ -85,8 +109,11 @@ export default class EditVoyage extends Component {
     e.preventDefault();
 
     const voyage = {
-      location: this.state.location,
       date: this.state.date,
+      region: this.state.region,
+      country: this.state.country,
+      territory: this.state.territory,
+      location: this.state.location,
       rating: this.state.rating,
       companions: this.state.companions,
       duration: this.state.duration,
@@ -107,6 +134,39 @@ export default class EditVoyage extends Component {
       <div>
         <h3>Edit Voyage</h3>
         <form onSubmit={this.onSubmit}>
+          <div className="form-group">
+            <label>Date: </label>
+            <DatePicker
+              selected={this.state.date}
+              onChange={this.onChangeDate}
+            />
+          </div>
+          <div className="form-group"> 
+            <label>Region: </label>
+            <input  type="text"
+                required
+                className="form-control"
+                value={this.state.region}
+                onChange={this.onChangeRegion}
+                />
+          </div>
+          <div className="form-group"> 
+            <label>Country: </label>
+            <input  type="text"
+                required
+                className="form-control"
+                value={this.state.country}
+                onChange={this.onChangeCountry}
+                />
+          </div>
+          <div className="form-group"> 
+            <label>State/Territory: </label>
+            <input  type="text"
+                className="form-control"
+                value={this.state.territory}
+                onChange={this.onChangeTerritory}
+                />
+          </div>
           <div className="form-group"> 
             <label>Location: </label>
             <input  type="text"
@@ -115,13 +175,6 @@ export default class EditVoyage extends Component {
                 value={this.state.location}
                 onChange={this.onChangeLocation}
                 />
-          </div>
-          <div className="form-group">
-            <label>Date: </label>
-            <DatePicker
-              selected={this.state.date}
-              onChange={this.onChangeDate}
-            />
           </div>
           <div className="form-group">
             <label>Rating: </label>

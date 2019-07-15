@@ -7,6 +7,7 @@ const Voyage = props => (
     <td>{props.voyage.location}</td>
     <td>{props.voyage.date.substring(0,10)}</td>
     <td>
+      <Link className="main-edit-btn" to={"/view/"+props.voyage._id}>view</Link> | 
       <Link className="main-edit-btn" to={"/edit/"+props.voyage._id}>edit</Link> | 
       <a className="main-delete-btn" href="/" onClick={() => { props.deleteVoyage(props.voyage._id) }}>delete</a>
     </td>
@@ -50,15 +51,17 @@ export default class VoyagesList extends Component {
         <h3 className="my-voyages-header">My Voyages</h3>
         <h6>
           <Link to="/" className="table-filters">Past</Link>
+          <p className="table-filters">|</p>
           <Link to="/" className="table-filters">Future</Link>
+          <p className="table-filters">|</p>
           <Link to="/" className="table-filters">All</Link>
         </h6>
         <table className="table table-striped">
           <thead style={{backgroundColor: "#e3fdee"}}>
             <tr>
               <th>Location</th>
-              <th>Date</th>
-              <th>Actions</th>
+              <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Date</th>
+              <th> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Actions</th>
             </tr>
           </thead>
           <tbody>

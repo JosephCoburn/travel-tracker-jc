@@ -3,8 +3,11 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const voyageSchema = new Schema({
-  location: { type: String, required: true },
   date: { type: Date, required: true },
+  region: { type: String, required: true },
+  country: { type: String, required: true },
+  territory: { type: String },
+  location: { type: String },
   rating: { type: Number },
   companions: { type: String },
   duration: { type: Number },
