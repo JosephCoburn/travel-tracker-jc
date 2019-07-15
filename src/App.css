@@ -54,7 +54,7 @@
 }
 
 .navbar-brand {
-  font-size: 36px;
+  font-size: 28px;
 }
 
 .select-box--container {
@@ -131,6 +131,9 @@
   border-bottom: 10px solid #fff;
 }
 
+.form-control {
+  margin: -10px 0 0 0;
+}
 
 @keyframes App-logo-spin {
   from {

@@ -48,7 +48,7 @@ export default class VoyagesList extends Component {
   render() {
     return (
       <div>
-        <h3 className="my-voyages-header">My Voyages</h3>
+        <h2 className="my-voyages-header">My Voyages</h2>
         <h6>
           <Link to="/" className="table-filters">Past</Link>
           <p className="table-filters">|</p>

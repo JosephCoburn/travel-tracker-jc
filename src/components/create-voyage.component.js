@@ -107,16 +107,17 @@ export default class CreateVoyage extends Component {
 	render() {
     return (
       <div>
-        <h3>Add New Voyage</h3>
+        <h2 className="my-voyages-header">Add New Voyage</h2>
+        <br />
+        <hr />
         <form onSubmit={this.onSubmit}>
           <div className="form-group">
             <label>Date: </label>
-            <div>
+            &nbsp;&nbsp;
               <DatePicker
                 selected={this.state.date}
                 onChange={this.onChangeDate}
               />
-            </div>
           </div>
           <div className="form-group"> 
             <label>Region: </label>

@@ -28,8 +28,6 @@ return (
       <Link to="/create" className="nav-link">Add Voyage</Link>
       </li>
     </ul>
-    <ul className="navbar-nav ml-auto">
-    </ul>
   </nav>
 )};
 

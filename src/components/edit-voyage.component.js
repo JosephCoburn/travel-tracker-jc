@@ -132,7 +132,9 @@ export default class EditVoyage extends Component {
   render() {
     return (
       <div>
-        <h3>Edit Voyage</h3>
+        <h2 className="my-voyages-header">Edit Voyage</h2>
+        <br />
+        <hr />
         <form onSubmit={this.onSubmit}>
           <div className="form-group">
             <label>Date: </label>
@@ -142,7 +144,7 @@ export default class EditVoyage extends Component {
             />
           </div>
           <div className="form-group"> 
-            <label>Region: </label>
+            <label className="label-title">Region: </label>
             <input  type="text"
                 required
                 className="form-control"

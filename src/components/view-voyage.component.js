@@ -47,7 +47,7 @@ export default class EditVoyage extends Component {
   render() {
     return (
       <div>
-        <h3>View Voyage</h3>
+        <h2 className="my-voyages-header">View Voyage</h2>
 
         <table class="table table-striped">
           <tbody>
