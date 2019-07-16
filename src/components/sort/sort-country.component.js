@@ -314,7 +314,7 @@ export default class VoyagesList extends Component {
               <Link to="/sort-country-jordan" className="sort-by-region">Jordan </Link>
             </tr>
             <tr>
-              <Link to="/sort-country-kazakhstan" className="sort-by-region">Kaskhstan </Link>
+              <Link to="/sort-country-kazakhstan" className="sort-by-region">Kazakhstan </Link>
             </tr>
             <tr>
               <Link to="/sort-country-kenya" className="sort-by-region">Kenya </Link>
@@ -464,7 +464,7 @@ export default class VoyagesList extends Component {
               <Link to="/sort-country-peru" className="sort-by-region">Peru </Link>
             </tr>
             <tr>
-              <Link to="/sort-country-phillipines" className="sort-by-region">Phillipines </Link>
+              <Link to="/sort-country-philippines" className="sort-by-region">Philippines </Link>
             </tr>
             <tr>
               <Link to="/sort-country-poland" className="sort-by-region">Poland </Link>
@@ -611,7 +611,7 @@ export default class VoyagesList extends Component {
               <Link to="/sort-country-uk" className="sort-by-region">United Kingdom </Link>
             </tr>
             <tr>
-              <Link to="/sort-country-usa" className="sort-by-region">Unites States </Link>
+              <Link to="/sort-country-usa" className="sort-by-region">United States </Link>
             </tr>
             <tr>
               <Link to="/sort-country-uruguay" className="sort-by-region">Uruguay </Link>

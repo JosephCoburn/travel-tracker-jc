@@ -232,7 +232,7 @@ import SortCountryPanama from './components/sort/country/sort-Panama.component';
 import SortCountryPapua from './components/sort/country/sort-Papua-New-Guinea.component';
 import SortCountryParaguay from './components/sort/country/sort-Paraguay.component';
 import SortCountryPeru from './components/sort/country/sort-Peru.component';
-import SortCountryPhillipines from './components/sort/country/sort-Phillipines.component';
+import SortCountryPhilippines from './components/sort/country/sort-Phillipines.component';
 import SortCountryPoland from './components/sort/country/sort-Poland.component';
 import SortCountryQatar from './components/sort/country/sort-Qatar.component';
 import SortCountryRomania from './components/sort/country/sort-Romania.component';
@@ -488,7 +488,7 @@ class App extends Component {
           <Route path="/sort-country-papua" component={SortCountryPapua} />
           <Route path="/sort-country-paraguay" component={SortCountryParaguay} />
           <Route path="/sort-country-peru" component={SortCountryPeru} />
-          <Route path="/sort-country-phillipines" component={SortCountryPhillipines} />
+          <Route path="/sort-country-philippines" component={SortCountryPhilippines} />
           <Route path="/sort-country-poland" component={SortCountryPoland} />
           <Route path="/sort-country-qatar" component={SortCountryQatar} />
           <Route path="/sort-country-romania" component={SortCountryRomania} />

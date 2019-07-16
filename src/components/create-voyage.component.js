@@ -4,6 +4,7 @@ import DatePicker from 'react-datepicker';
 import Autosuggest from 'react-autosuggest';
 import "react-datepicker/dist/react-datepicker.css";
 import tokenService from '../utils/tokenService';
+import Popover from "./popovers/region-popover.component"
 
 export default class CreateVoyage extends Component {
 	constructor(props) {
@@ -122,7 +123,8 @@ export default class CreateVoyage extends Component {
               />
           </div>
           <div className="form-group"> 
-            <label className="label-title">Region: </label>
+            <label className="label-title" >Region: </label>  
+            {/* <Popover />      */}
             <input  type="text"
                 required
                 className="form-control"
@@ -148,7 +150,7 @@ export default class CreateVoyage extends Component {
                 />
           </div>
           <div className="form-group"> 
-            <label>Location: </label>
+            <label>Destination: </label>
             <input  type="text"
                 required
                 className="form-control"

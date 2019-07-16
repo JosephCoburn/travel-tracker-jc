@@ -170,7 +170,7 @@ export default class EditVoyage extends Component {
                 />
           </div>
           <div className="form-group"> 
-            <label>Location: </label>
+            <label>Destination: </label>
             <input  type="text"
                 required
                 className="form-control"

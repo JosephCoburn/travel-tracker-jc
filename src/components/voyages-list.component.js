@@ -6,7 +6,7 @@ import userService from "../utils/userService";
 const Voyage = props => (
   <tr>
     <td>{props.voyage.location}</td>
-    <td>{props.voyage.date.substring(0,10)}</td>
+    <td>  {props.voyage.date.substring(0,10)}</td>
     <td>
       <Link className="main-edit-btn" to={"/view/"+props.voyage._id}>view</Link> | 
       <Link className="main-edit-btn" to={"/edit/"+props.voyage._id}>edit</Link> | 
@@ -25,6 +25,7 @@ export default class VoyagesList extends Component {
     };
   }
 
+
   componentDidMount() {
     console.log(this.state)
     var userId = this.state.user._id;
@@ -34,7 +35,7 @@ export default class VoyagesList extends Component {
        return res.json();
      }).then(function(json) {
        self.setState({voyages: json});
-      // console.log(json);
+       console.log(self.state.voyages)
      })
   }
 
@@ -62,8 +63,8 @@ export default class VoyagesList extends Component {
         <table className="table table-striped">
           <thead style={{backgroundColor: "#e3fdee"}}>
             <tr>
-              <th>Location</th>
-              <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Date</th>
+              <th>Destination</th>
+              <th>&nbsp;&nbsp;&nbsp;&nbsp;Date</th>
               <th> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Actions</th>
             </tr>
           </thead>

@@ -1,70 +1,55 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<!-- [![Open App](https://i.imgur.com/dQnQmno.png)](https://datebase-app.herokuapp.com/)
+<br>
+<br>
 
-## Available Scripts
+#### Description
+*With all the dating apps available today, it can be difficult to keep track of all the information about all of your matches. The datəbase solves this problem, providing users with a way to organize dating app matches! Create entries for each match, input their information, schedule new rendezvous, send rendezvous details to your Google Calendar, and search Yelp for rendezvous suggestions. Simplify your dating life with the datəbase, and never lose track of information again!* 
 
-In the project directory, you can run:
 
-### `npm start`
+[![Open App](https://i.imgur.com/9oc7hXO.png)](https://drive.google.com/file/d/125bh7PeEoBoJ1UPjLvEkUVVqKkFgyr2B/view?usp=sharing)
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+#### Technologies Used:
+*Django, Python, PostgreSQL, AWS, Javascript, Heroku, Yelp API, Google Calendar API, Adobe XD, Adobe InDesign, Adobe Photoshop, Adobe Illustrator, HTML, CSS, Materialize, Git, GitHub*
 
-### `npm test`
+#### Getting Started
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+*Click 'Sign Up' to continue. No email address is required. After the account is created, start by either adding a match or creating your profile. To add a match, simply click the button displayed. To create your profile, click the navigation button in the top right corner, then click the grey avatar and 'Create Profile'. After adding at least one match, users can create rendezvous by clicking 'Add Rendezvous' from the navigation bar or from a match's detail page. Once a rendezvous is scheduled, users can view the rendezvous details and send them to their Google Calendar by clicking the button from the rendezvous details page. To get date suggestions from yelp, be sure that the scheduled rendezvous contains both an activity and location, then simply click 'Search Yelp For Ideas'. If a match ghosts you, indicate this by clicking the 'Ghosted' button from the match's details page.* 
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Core Functionality
+- Login using Django
+- Create profile and input details
+- Edit and delete profile details
+- Add matches and input details including photos, name, contact info, and more
+- Edit and delete match details
+- Delete matches from app
+- Add rendezvous and input details including date, time, location, activity, and notes
+- Edit and delete rendezvous details
+- Delete rendezvous from app
+- Send rendezvous info to Google Calendar
+- Search Yelp for date ideas from inside app
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+#### Additional Notes
+- While our app is being verified by Google, users will need to follow these instructions to send rendezvous to their Google Calendar.
+	- From rendezvous details, click 'Send to Google Calendar'
+	- A new window will open prompting user to choose an account
+	- Login with the google account you'd like to send the calendar event
+	- A message will pop up saying 'This app isn't verified'
+	- Click 'Advanced' in the bottom left
+	- Click 'Go to Quickstart(unsafe)'
+	- A new window will open titled 'Grant Quickstart permission'
+	- Click 'Allow'
+	- Make sure the box is checked and click 'Allow' to confirm choices
+	- When a screen appears confirming that the authentication flow has completed, you can close the window
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### Upcoming Functionality
+- Include favorites tag for matches
+- Sort matches by number of dates, location, etc
+- View map of yelp suggestions
+- Text and call matches from inside app
+- Include horoscope compatibility percentages for all matches
 
-### `npm run eject`
+#### About
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-# mern-travel-tracker
-# tt-build
+![the datebase about](https://i.imgur.com/1QbykoD.png) -->
