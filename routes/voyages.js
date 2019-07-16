@@ -3,12 +3,14 @@ let Voyage = require('../models/voyage.model');
 const voyagesCtrl = require('../controllers/voyages');
 
 router.route('/').get((req, res) => {
-  Voyage.find()
+  var userId = req.query.userId
+  Voyage.find({user: userId}).sort("-date")
     .then(voyages => res.json(voyages))
     .catch(err => res.status(400).json('Error: ' + err));
 });
 
 router.route('/add').post((req, res) => {
+  console.log('heloooooooooo')
   const date = Date.parse(req.body.date);
   const region = req.body.region;
   const country = req.body.country;
@@ -19,6 +21,9 @@ router.route('/add').post((req, res) => {
   const duration = Number(req.body.duration);
   const cost = Number(req.body.cost);
   const notes = req.body.notes;
+  const user = req.body.user;
+
+  console.log(user);
 
   const newVoyage = new Voyage({
     date,
@@ -31,6 +36,7 @@ router.route('/add').post((req, res) => {
     duration,
     cost,
     notes,
+    user,
   });
 
   newVoyage.save()
@@ -56,7 +62,7 @@ router.route('/update/:id').post((req, res) => {
       voyage.country = req.body.country;
       voyage.territory = req.body.territory;
       voyage.location = req.body.location;
-      voyage.rating = Number(req.body.duration);
+      voyage.rating = Number(req.body.rating);
       voyage.companions = req.body.companions;
       voyage.duration = Number(req.body.duration);
       voyage.cost = Number(req.body.cost);
@@ -71,7 +77,8 @@ router.route('/update/:id').post((req, res) => {
 /*---------- Protected Routes ----------*/
 // Process the token for only the routes below
 router.use(require('../config/auth'));
-router.post('/', checkAuth, voyagesCtrl.create);
+router.post('/add', checkAuth, voyagesCtrl.create);
+
 
 /*----- Helper Functions -----*/
 function checkAuth(req, res, next) {

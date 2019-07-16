@@ -31,10 +31,12 @@
 }
 
 .main-edit-btn {
+  margin: 0 0 0 2px;
   color: #7BBAFA;
 }
 
 .main-delete-btn {
+  margin: 0 0 0 2px;
   color: #a895d6;
 }
 
@@ -44,6 +46,38 @@
 }
 
 .table-filters {
+  color: black;
+  margin: 10px 5px 0px 0px;
+  float: right;
+}
+
+.sort-by {
+  color: #5ebeff;
+  margin: 0px 0px 0px 20px;
+  float: left;
+}
+
+.sort-by--table {
+  font-size: 26px;
+  width: 120px;
+  margin: 0px 0px 0px 20px;
+  float: left;
+}
+
+.sort-by-region {
+  color: #5ebeff;
+  margin: 0px 0px 0px 20px;
+  float: left;
+}
+
+.sort-by-region--table {
+  font-size: 26px;
+  width: 210px;
+  margin: 0px 0px 0px 20px;
+  float: left;
+}
+
+.table-filters-first {
   color: black;
   margin: 10px 15px 0px 0px;
   float: right;
@@ -133,6 +167,10 @@
 
 .form-control {
   margin: -10px 0 0 0;
+}
+
+.header-footer {
+  margin: 0 0 10px 0;
 }
 
 @keyframes App-logo-spin {

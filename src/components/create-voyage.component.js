@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import DatePicker from 'react-datepicker';
+import Autosuggest from 'react-autosuggest';
 import "react-datepicker/dist/react-datepicker.css";
+import tokenService from '../utils/tokenService';
 
 export default class CreateVoyage extends Component {
 	constructor(props) {
@@ -97,8 +99,8 @@ export default class CreateVoyage extends Component {
       duration: this.state.duration,
       cost: this.state.cost,
       notes: this.state.notes,
+      user: tokenService.getUserFromToken()._id,
 		};
-    console.log(voyage);
     axios.post('http://localhost:3001/voyages/add', voyage)
   .then(res => console.log(res.data));
 		window.location = '/';
@@ -120,7 +122,7 @@ export default class CreateVoyage extends Component {
               />
           </div>
           <div className="form-group"> 
-            <label>Region: </label>
+            <label className="label-title">Region: </label>
             <input  type="text"
                 required
                 className="form-control"

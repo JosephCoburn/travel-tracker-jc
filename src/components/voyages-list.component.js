@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import userService from "../utils/userService";
 
 const Voyage = props => (
   <tr>
@@ -18,16 +19,22 @@ export default class VoyagesList extends Component {
   constructor(props) {
     super(props);
     this.deleteVoyage = this.deleteVoyage.bind(this);
-    this.state = {voyages: []};
+    this.state = {
+      voyages: [],
+      user: userService.getUser(),
+    };
   }
 
   componentDidMount() {
-    axios.get('http://localhost:3001/voyages/')
-     .then(response => {
-       this.setState({ voyages: response.data });
-     })
-     .catch((error) => {
-        console.log(error);
+    console.log(this.state)
+    var userId = this.state.user._id;
+    var self = this;
+
+     fetch(`http://localhost:3001/voyages?userId=${userId}`).then(function(res) {
+       return res.json();
+     }).then(function(json) {
+       self.setState({voyages: json});
+      // console.log(json);
      })
   }
 
@@ -48,13 +55,9 @@ export default class VoyagesList extends Component {
   render() {
     return (
       <div>
-        <h2 className="my-voyages-header">My Voyages</h2>
+        <h2 className="my-voyages-header">My Voyages</h2> 
         <h6>
-          <Link to="/" className="table-filters">Past</Link>
-          <p className="table-filters">|</p>
-          <Link to="/" className="table-filters">Future</Link>
-          <p className="table-filters">|</p>
-          <Link to="/" className="table-filters">All</Link>
+          <Link to="/sort" className="table-filters-first">Sort by: </Link>
         </h6>
         <table className="table table-striped">
           <thead style={{backgroundColor: "#e3fdee"}}>

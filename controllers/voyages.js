@@ -5,6 +5,7 @@ module.exports = {
 };
 
 async function create(req, res) {
+  console.log(req)
   try {
     await Voyage.create(req.body);
   } catch (err) {

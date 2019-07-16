@@ -49,7 +49,7 @@ export default class EditVoyage extends Component {
       <div>
         <h2 className="my-voyages-header">View Voyage</h2>
 
-        <table class="table table-striped">
+        <table className="table table-striped">
           <tbody>
             <tr>
               <th scope="row">Date:</th>
