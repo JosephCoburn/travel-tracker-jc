@@ -24,9 +24,6 @@
 - Delete a voyage
 - Sort voyages by region, country, or state
 
-#### Additional Notes
-**IMPORTANT!** *In order to use the sort functionality, users must input location properties (region, country, state/territory) using their proper names -- EXACTLY as they'd be found in an atlas. This means capitalization and exact characters must be used. For example, 'Texas' MUST be input as 'Texas'. If it is entered as 'texas', 'texas ', 'texus' ... etc, the sort functionality will not work.*
-
 #### Upcoming Functionality
 - Render maps that dynamically update to fill in locations based on a user's voyages
 - Include filters to render multiple maps (ex. USA Map displays national map with all corresponding states shaded. Countries Map displays a world map with all corresponding countries shaded. etc.)
@@ -40,3 +37,7 @@
 - Allow users to view all badges.
 - Allow photo uploads for a voyage.
 - Allow users to add information to their profile including photos, bio, favorite locations, desired destinations, etc.
+
+#### Additional Notes
+_ **IMPORTANT!** _
+*In order to use the sort functionality, users must input location properties (region, country, state/territory) using their proper names -- EXACTLY as they'd be found in an atlas. This means capitalization and exact characters must be used. For example, 'Texas' MUST be input as 'Texas'. If it is entered as 'texas', 'texas ', 'texus' ... etc, the sort functionality will not work.*
