@@ -8,52 +8,37 @@
 Screenshot.jpeg
 
 #### Technologies Used:
-*Mongoose, Express, React, Node, Heroku, Javascript, HTML, CSS, Bootstrap, Git, GitHub*
+*MongoDB/Mongoose, Express, React, Node, Heroku, AJAX, Javascript, HTML, CSS, Bootstrap, Git, GitHub*
 
 #### Getting Started
 
 *Click 'Login' to begin. Enter an email and password. You will not be sent any emails whatsoever from this. In fact, it doesn't even have to be a real email address. Just input something you'll remember. After Signup, you will automatically be logged in with that account. Click 'Add Voyage' on the navigation bar to start using the app! When inputting information, remember that the only required fields are 'Date', 'Region', 'Country', and 'Destination'.* 
 
-**IMPORTANT!** *In order to use the sort functionality, users must input location properties (region, country, state/territory) EXACTLY as they'd be found on an atlas. For example, 'United States' MUST be input as 'United States'. If it is entered as 'united states', 'US of A', 'Unied States' ... etc, the sort functionality will not work. *
-
-**
-
-*Click 'Sign Up' to continue. No email address is required. After the account is created, start by either adding a match or creating your profile. To add a match, simply click the button displayed. To create your profile, click the navigation button in the top right corner, then click the grey avatar and 'Create Profile'. After adding at least one match, users can create rendezvous by clicking 'Add Rendezvous' from the navigation bar or from a match's detail page. Once a rendezvous is scheduled, users can view the rendezvous details and send them to their Google Calendar by clicking the button from the rendezvous details page. To get date suggestions from yelp, be sure that the scheduled rendezvous contains both an activity and location, then simply click 'Search Yelp For Ideas'. If a match ghosts you, indicate this by clicking the 'Ghosted' button from the match's details page.* 
+*To view all voyages, click 'Travel Tracker in the top left. To access sort functionality, click 'Sort by:' in the top right. Follow the prompt to filter your voyages list based on the parameters selected here. Use the 'Actions' to view, edit, or delete a voyage.*
 
 
 #### Core Functionality
-- Login using Django
-- Create profile and input details
-- Edit and delete profile details
-- Add matches and input details including photos, name, contact info, and more
-- Edit and delete match details
-- Delete matches from app
-- Add rendezvous and input details including date, time, location, activity, and notes
-- Edit and delete rendezvous details
-- Delete rendezvous from app
-- Send rendezvous info to Google Calendar
-- Search Yelp for date ideas from inside app
+- Signup with token-based authentication
+- Create voyages with inputs including date, region, country, state, location, rating, companions, duration, cost, and notes
+- Users' access limited to only their own voyages through authorization
+- View all voyages from app's homepage
+- Edit voyage details
+- Delete a voyage
+- Sort voyages by region, country, or state
 
 #### Additional Notes
-- While our app is being verified by Google, users will need to follow these instructions to send rendezvous to their Google Calendar.
-	- From rendezvous details, click 'Send to Google Calendar'
-	- A new window will open prompting user to choose an account
-	- Login with the google account you'd like to send the calendar event
-	- A message will pop up saying 'This app isn't verified'
-	- Click 'Advanced' in the bottom left
-	- Click 'Go to Quickstart(unsafe)'
-	- A new window will open titled 'Grant Quickstart permission'
-	- Click 'Allow'
-	- Make sure the box is checked and click 'Allow' to confirm choices
-	- When a screen appears confirming that the authentication flow has completed, you can close the window
+**IMPORTANT!** *In order to use the sort functionality, users must input location properties (region, country, state/territory) using their proper names -- EXACTLY as they'd be found in an atlas. This means capitalization and exact characters must be used. For example, 'Texas' MUST be input as 'Texas'. If it is entered as 'texas', 'texas ', 'texus' ... etc, the sort functionality will not work.*
 
 #### Upcoming Functionality
-- Include favorites tag for matches
-- Sort matches by number of dates, location, etc
-- View map of yelp suggestions
-- Text and call matches from inside app
-- Include horoscope compatibility percentages for all matches
-
-#### About
-
-![the datebase about](https://i.imgur.com/1QbykoD.png) -->
+- Render maps that dynamically update to fill in locations based on a user's voyages
+- Include filters to render multiple maps (ex. USA Map displays national map with all corresponding states shaded. Countries Map displays a world map with all corresponding countries shaded. etc.)
+- Include 'progress bars' for regions, countries, and states (ex. the USA progress bar displays a horizontal bar which fills with progress and shows: "You have been to X/50 states!")
+- Include filters to sort by highest rated, future or past trips, and cost.
+- Allow multiple states/countries/regions to be added for any voyage 
+- Allow multiple voyages from the same trip to be linked, and collapsed into one trip
+- Include 'Copy Voyage' to prefill a create new voyage.
+- Allow users to 'favorite' voyages and access a list of their favorites.
+- Award users 'badges' in the form of icons for completion of certain criteria (ex. 'You've been to all 50 states!', etc.)
+- Allow users to view all badges.
+- Allow photo uploads for a voyage.
+- Allow users to add information to their profile including photos, bio, favorite locations, desired destinations, etc.
