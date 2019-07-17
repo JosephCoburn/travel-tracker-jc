@@ -39,5 +39,5 @@
 - Allow users to add information to their profile including photos, bio, favorite locations, desired destinations, etc.
 
 #### Additional Notes
-_ **IMPORTANT!** _
+
 *In order to use the sort functionality, users must input location properties (region, country, state/territory) using their proper names -- EXACTLY as they'd be found in an atlas. This means capitalization and exact characters must be used. For example, 'Texas' MUST be input as 'Texas'. If it is entered as 'texas', 'texas ', 'texus' ... etc, the sort functionality will not work.*
