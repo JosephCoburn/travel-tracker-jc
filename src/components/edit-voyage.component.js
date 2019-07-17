@@ -34,7 +34,7 @@ export default class EditVoyage extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:3001/voyages/'+this.props.match.params.id)
+    axios.get('voyages/'+this.props.match.params.id)
       .then(response => {
         this.setState({
           date: new Date(response.data.date),
@@ -123,7 +123,7 @@ export default class EditVoyage extends Component {
 
     console.log(voyage);
 
-    axios.post('http://localhost:3001/voyages/update/'+this.props.match.params.id, voyage)
+    axios.post('/voyages/update/'+this.props.match.params.id, voyage)
       .then(res => console.log(res.data));
     
     window.location = '/';

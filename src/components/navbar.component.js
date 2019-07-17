@@ -15,9 +15,6 @@ let nav = props.user ?
       <div className="nav-link">|</div>
     </li>
     <li className="navbar-item">
-    <Link to="/" className="nav-link">Voyages</Link>
-    </li>
-    <li className="navbar-item">
     <Link to="/create" className="nav-link">Add Voyage</Link>
     </li>
   </ul>

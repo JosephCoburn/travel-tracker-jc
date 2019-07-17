@@ -31,7 +31,7 @@ export default class VoyagesList extends Component {
     var userId = this.state.user._id;
     var self = this;
 
-     fetch(`http://localhost:3001/voyages?userId=${userId}`).then(function(res) {
+     fetch(`/voyages?userId=${userId}`).then(function(res) {
        return res.json();
      }).then(function(json) {
        self.setState({voyages: json});
@@ -40,7 +40,7 @@ export default class VoyagesList extends Component {
   }
 
   deleteVoyage(id) {
-    axios.delete('http://localhost:3001/voyages/'+id)
+    axios.delete('/voyages/'+id)
       .then(res => console.log(res.data));
     this.setState({
       voyages: this.state.voyages.filter(el => el._id !== id)
@@ -49,7 +49,7 @@ export default class VoyagesList extends Component {
 
   voyageList() {
     return this.state.voyages.map(currentvoyage => {
-      if (currentvoyage.country == "Albania") {
+      if (currentvoyage.country === "Albania") {
       return <Voyage voyage={currentvoyage} deleteVoyage={this.deleteVoyage} key={currentvoyage._id}/>;
     }
   })

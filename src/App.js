@@ -11,16 +11,9 @@ import EditVoyage from "./components/edit-voyage.component";
 import CreateVoyage from "./components/create-voyage.component";
 
 import SortVoyage from "./components/sort/sort-voyage.component";
-import SortVoyageDate from "./components/sort/sort-date.component";
 import SortVoyageRegion from "./components/sort/sort-region.component";
 import SortVoyageCountry from "./components/sort/sort-country.component";
 import SortVoyageState from "./components/sort/sort-state.component";
-import SortVoyageRating from "./components/sort/sort-rating.component";
-
-import SortDateFuture from "./components/sort/date/date-future.component";
-import SortDateNewest from "./components/sort/date/date-newest.component";
-import SortDateOldest from "./components/sort/date/date-oldest.component";
-import SortDatePast from "./components/sort/date/date-past.component";
 
 import SortRegionAfrica from "./components/sort/region/africa.component";
 import SortRegionAsia from "./components/sort/region/asia.component";
@@ -33,12 +26,8 @@ import SortRegionNorthAmerica from "./components/sort/region/north-america.compo
 import SortRegionOceania from "./components/sort/region/oceania.component";
 import SortRegionSouthAmerica from "./components/sort/region/south-america.component";
 
-import SortRatingHighest from "./components/sort/rating/rating-highest.component";
-import SortRatingLowest from "./components/sort/rating/rating-lowest.component";
-
 import SortStateUSA from "./components/sort/state/sort-state-usa.component";
 import SortStateCanada from "./components/sort/state/sort-state-canada.component";
-
 
 import LoginPage from "./pages/LoginPage/LoginPage";
 import SignupPage from "./pages/SignupPage/SignupPage";
@@ -94,6 +83,7 @@ import SortStateWashington from './components/sort/state/usa/sort-washington.com
 import SortStateWestVirginia from './components/sort/state/usa/sort-west-virginia.component';
 import SortStateWisconsin from './components/sort/state/usa/sort-wisconsin.component';
 import SortStateWyoming from './components/sort/state/usa/sort-wyoming.component';
+
 import SortStateAlberta from './components/sort/state/canada/sort-alberta.component';
 import SortStateBritishColumbia from './components/sort/state/canada/sort-british-columbia.component';
 import SortStateManitoba from './components/sort/state/canada/sort-manitoba.component';
@@ -107,6 +97,7 @@ import SortStatePrinceEdwardIsland from './components/sort/state/canada/sort-pri
 import SortStateQuebec from './components/sort/state/canada/sort-quebec.component';
 import SortStateSaskatchewan from './components/sort/state/canada/sort-saskatchewan.component';
 import SortStateYukon from './components/sort/state/canada/sort-yukon.component';
+
 import SortCountryAfghanistan from './components/sort/country/sort-Afghanistan.component';
 import SortCountryAlbania from './components/sort/country/sort-Albania.component';
 import SortCountryAndorra from './components/sort/country/sort-Andorra.component';
@@ -334,11 +325,6 @@ class App extends Component {
 
           <Route path="/sort" component={SortVoyage} />
 
-          <Route path="/sort-date" component={SortVoyageDate} />
-          <Route path="/sort-date-future" component={SortDateFuture}/>
-          <Route path="/sort-date-newest" component={SortDateNewest}/>
-          <Route path="/sort-date-oldest" component={SortDateOldest}/>
-          <Route path="/sort-date-past" component={SortDatePast}/>
 
           <Route path="/sort-region" component={SortVoyageRegion} />
           <Route path="/sort-region-africa" component={SortRegionAfrica} />
@@ -613,11 +599,6 @@ class App extends Component {
           <Route path="/sort-quebec" component={SortStateQuebec} />
           <Route path="/sort-saskatchewan" component={SortStateSaskatchewan} />
           <Route path="/sort-yukon" component={SortStateYukon} />
-
-          <Route path="/sort-rating" component={SortVoyageRating} />
-          <Route path="/sort-rating-highest" component={SortRatingHighest} />
-          <Route path="/sort-rating-lowest" component={SortRatingLowest} />
-          
 
           <Route exact path='/signup' render={({ history }) => 
           <SignupPage

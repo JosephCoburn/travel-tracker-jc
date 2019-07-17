@@ -23,7 +23,7 @@ export default class EditVoyage extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:3001/voyages/'+this.props.match.params.id)
+    axios.get('/voyages/'+this.props.match.params.id)
       .then(response => {
         this.setState({
           date: new Date(response.data.date),
