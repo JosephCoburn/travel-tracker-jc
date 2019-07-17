@@ -1,17 +1,15 @@
-<!-- [![Open App]](https://react-travel-tracker.herokuapp.com/)
-<br>
-<br>
+# Travel Tracker
 
 #### Description
 *Keep track of all your travels with the Travel Tracker app! Login and create entries, input information and view, edit, or delete any entry using the intuitive navigation from the app's home page. Users can then see everywhere they've been using the Travel Tracker app! Click the sort button to filter your voyages by world region, country, or state. Now all you globetrotters can see exactly how much of the world you have explored!* 
 
-Screenshot.jpeg
+![Screenshot](https://i.imgur.com/psiluXb.png)
+
 
 #### Technologies Used:
 *MongoDB/Mongoose, Express, React, Node, Heroku, AJAX, Javascript, HTML, CSS, Bootstrap, Git, GitHub*
 
 #### Getting Started
-
 *Click 'Login' to begin. Enter an email and password. You will not be sent any emails whatsoever from this. In fact, it doesn't even have to be a real email address. Just input something you'll remember. After Signup, you will automatically be logged in with that account. Click 'Add Voyage' on the navigation bar to start using the app! When inputting information, remember that the only required fields are 'Date', 'Region', 'Country', and 'Destination'.* 
 
 *To view all voyages, click 'Travel Tracker in the top left. To access sort functionality, click 'Sort by:' in the top right. Follow the prompt to filter your voyages list based on the parameters selected here. Use the 'Actions' to view, edit, or delete a voyage.*
