@@ -10,13 +10,6 @@ const port = process.env.PORT || 3001;
 app.use(cors());
 app.use(express.json());
 
-var history = require('connect-history-api-fallback');
-
-var connect = require('connect');
-
-var app = connect()
-  .use(history())
-  .listen(3000);
 
 const uri = process.env.ATLAS_URI;
 mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true }
