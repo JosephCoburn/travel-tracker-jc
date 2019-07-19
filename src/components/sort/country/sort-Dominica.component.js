@@ -69,8 +69,8 @@ export default class VoyagesList extends Component {
         <table className="table table-striped">
           <thead style={{backgroundColor: "#e3fdee"}}>
             <tr>
-              <th>Destination</th>
-              <th>Date</th>
+              <th>What</th>
+              <th>When</th>
               <th>View</th>
               <th>Edit</th>
               <th>Undo</th>
