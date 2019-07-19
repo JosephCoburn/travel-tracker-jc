@@ -17,7 +17,7 @@ app.use('/voyages', voyagesRouter);
 app.use('/api', usersRouter);
 
 app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+  res.sendFile(path.resolve(__dirname, 'build', 'index.html'));
 });
 
 const uri = process.env.ATLAS_URI;
