@@ -14,7 +14,7 @@ const Voyage = props => (
       <Link className="main-edit-btn" to={"/edit/"+props.voyage._id}>edit</Link>
     </td>
     <td>
-      <a className="main-delete-btn" href="/" onClick={() => { props.deleteVoyage(props.voyage._id) }}>x</a>
+      <a className="main-delete-btn" href="/" onClick={() => { props.deleteVoyage(props.voyage._id) }}>undo</a>
     </td>
   </tr>
 )
@@ -69,7 +69,7 @@ export default class VoyagesList extends Component {
         <table className="table table-striped">
           <thead style={{backgroundColor: "#e3fdee"}}>
             <tr>
-              <th>What</th>
+              <th>Trip</th>
               <th>When</th>
               <th>View</th>
               <th>Edit</th>
