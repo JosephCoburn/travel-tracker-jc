@@ -1,25 +1,24 @@
 const express = require('express');
-const cors = require('cors');
 const mongoose = require('mongoose');
+const path = require('path');
 
 require('dotenv').config();
 
 const app = express();
 const port = process.env.PORT || 3001;
 
-app.use(cors());
 app.use(express.json());
 
-if (process.env.NODE_ENV === 'production') {
-  // Exprees will serve up production assets
-  app.use(express.static('client/build'));
+app.use(express.static(path.join(__dirname, 'build')));
 
-  // Express serve up index.html file if it doesn't recognize route
-  const path = require('path');
-  app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
-  });
-}
+const voyagesRouter = require('./routes/voyages');
+const usersRouter = require('./routes/users');
+app.use('/voyages', voyagesRouter);
+app.use('/api', usersRouter);
+
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+});
 
 const uri = process.env.ATLAS_URI;
 mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true }
@@ -28,11 +27,6 @@ const connection = mongoose.connection;
 connection.once('open', () => {
   console.log("MongoDB database connection established successfully");
 })
-
-const voyagesRouter = require('./routes/voyages');
-const usersRouter = require('./routes/users');
-app.use('/voyages', voyagesRouter);
-app.use('/api', usersRouter);
 
 app.listen(port, () => {
     console.log(`Server is running on port: ${port}`);
