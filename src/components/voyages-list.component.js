@@ -6,9 +6,11 @@ import userService from "../utils/userService";
 const Voyage = props => (
   <tr>
     <td>{props.voyage.location}</td>
-    <td>  {props.voyage.date.substring(5,7)}/{props.voyage.date.substring(8,10)}/{props.voyage.date.substring(2,4)}</td>
+    <td>{props.voyage.date.substring(5,7)}/{props.voyage.date.substring(8,10)}/{props.voyage.date.substring(2,4)}</td>
     <td>
-      <Link className="main-view-btn" to={"/view/"+props.voyage._id}>view</Link> |
+      <Link className="main-view-btn" to={"/view/"+props.voyage._id}>view</Link>
+    </td>
+    <td>
       <Link className="main-edit-btn" to={"/edit/"+props.voyage._id}>edit</Link>
     </td>
     <td>
@@ -67,7 +69,8 @@ export default class VoyagesList extends Component {
             <tr>
               <th>Destination</th>
               <th>Date</th>
-              <th>Actions</th>
+              <th>View</th>
+              <th>Edit</th>
               <th>Delete</th>
             </tr>
           </thead>

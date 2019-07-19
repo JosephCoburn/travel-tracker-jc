@@ -11,11 +11,15 @@ let nav = props.user ?
     <li className="navbar-item">
       <Link to='' className='nav-link' onClick={props.handleLogout}>Logout</Link>
     </li>
+  </ul>
+  <ul className="navbar-nav">
     <li className="navbar-item">
       <div className="nav-link">|</div>
     </li>
+  </ul>
+  <ul className="navbar-nav">
     <li className="navbar-item">
-    <Link to="/create" className="nav-link">Add</Link>
+      <Link to="/create" className="nav-link">Add Voyage</Link>
     </li>
   </ul>
   </nav>
