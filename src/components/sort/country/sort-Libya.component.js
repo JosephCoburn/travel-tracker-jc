@@ -73,7 +73,7 @@ export default class VoyagesList extends Component {
               <th>Date</th>
               <th>View</th>
               <th>Edit</th>
-              <th>Delete</th>
+              <th>Undo</th>
             </tr>
           </thead>
           <tbody>
