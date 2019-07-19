@@ -8,9 +8,9 @@ const Voyage = props => (
     <td>{props.voyage.location}</td>
     <td>  {props.voyage.date.substring(0,10)}</td>
     <td>
-      <Link className="main-edit-btn" to={"/view/"+props.voyage._id}>view</Link> | 
+      <Link className="main-view-btn" to={"/view/"+props.voyage._id}>view</Link> | 
       <Link className="main-edit-btn" to={"/edit/"+props.voyage._id}>edit</Link> | 
-      <a className="main-delete-btn" href="/" onClick={() => { props.deleteVoyage(props.voyage._id) }}>delete</a>
+      <a className="main-delete-btn" href="/" onClick={() => { props.deleteVoyage(props.voyage._id) }}>x</a>
     </td>
   </tr>
 )

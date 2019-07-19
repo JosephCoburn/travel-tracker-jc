@@ -35,9 +35,14 @@
   color: #7BBAFA;
 }
 
-.main-delete-btn {
+.main-view-btn {
   margin: 0 0 0 2px;
   color: #a895d6;
+}
+
+.main-delete-btn {
+  margin: 0 0 0 2px;
+  color: red;
 }
 
 .my-voyages-header {

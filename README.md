@@ -3,7 +3,7 @@
 #### Description
 *Keep track of all your travels with the Travel Tracker app! Login and create entries, input information and view, edit, or delete any entry using the intuitive navigation from the app's home page. Users can then see everywhere they've been using the Travel Tracker app! Click the sort button to filter your voyages by world region, country, or state. Now all you globetrotters can see exactly how much of the world you have explored!* 
 
-![Screenshot](https://i.imgur.com/psiluXb.png)
+[![Open App](https://i.imgur.com/psiluXb.png)](https://react-travel-tracker.herokuapp.com/)
 
 
 #### Technologies Used:
