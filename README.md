@@ -10,7 +10,7 @@
 *MongoDB/Mongoose, Express, React, Node, Heroku, AJAX, Javascript, HTML, CSS, Bootstrap, Git, GitHub*
 
 #### Getting Started
-*Click 'Login' to begin. Enter an email and password. You will not be sent any emails whatsoever from this. In fact, it doesn't even have to be a real email address. Just input something you'll remember. After Signup, you will automatically be logged in with that account. Click 'Add Voyage' on the navigation bar to start using the app! When inputting information, remember that the only required fields are 'Date', 'Region', 'Country', and 'Destination'.* 
+*First, click the banner at the top or [click here](https://react-travel-tracker.herokuapp.com/). Click 'Login' to begin. Enter an email and password. You will not be sent any emails whatsoever from this. In fact, it doesn't even have to be a real email address. Just input something you'll remember. After Signup, you will automatically be logged in with that account. Click 'Add Voyage' on the navigation bar to start using the app! When inputting information, remember that the only required fields are 'Date', 'Region', 'Country', and 'Destination'.* 
 
 *To view all voyages, click 'Travel Tracker in the top left. To access sort functionality, click 'Sort by:' in the top right. Follow the prompt to filter your voyages list based on the parameters selected here. Use the 'Actions' to view, edit, or delete a voyage.*
 
